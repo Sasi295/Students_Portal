@@ -1,0 +1,50 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ff8c00;
+  background-image: linear-gradient(135deg, rgba(92, 144, 241, 0.9) 0%, rgba(231, 230, 229, 0.6) 50%), linear-gradient(315deg, rgba(0,122,255,0.9) 0%, rgba(0,122,255,0.6) 50%);
+  background-size: cover;
+  background-position: center;  
+  background-repeat: no-repeat;
+  font-family: 'Segoe UI', sans-serif;
+  color: rgb(12, 12, 12);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+}
+
+.logo {
+  width: 320px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background-color: white;
+  color: #004080;
+  padding: 12px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}

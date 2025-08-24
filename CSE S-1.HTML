@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSE</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f7fb;
+  color: #f0eeee;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+ .sidebar {
+  background-image: url('uploads/Images/sidebar2.jpg');
+  padding: 20px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar button {
+
+  background-color: #6f757575;
+  color: #fffdfd;
+  padding: 15px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-family: 'Times New Roman';
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+
+.sidebar button:hover {
+  background-color: #747d8c;
+}
+
+/* Content Area */
+.content-area {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.year-content {
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.year-content.active {
+  display: block;
+}
+/* Add this after your existing CSS in the <style> tag */
+#CSEQuestionList li {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+#CSEMaterialList li {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+/* Upload/Download Sections */
+section {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #7d7e80;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+section h2 {
+  color: #cac1c1;
+  margin-bottom: 10px;
+}
+
+section button {
+  margin: 10px 0;
+  background-color: #3742fa;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+section button:hover {
+  background-color: #5352ed;
+}
+ 
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+/* Header */
+header {
+  background-color: #2f3542;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+</style>
+<body>
+   <div class="container">
+  <div class="sidebar">
+    <button onclick="showYear('year1-1')">1-1</button>
+     <button onclick="showYear('year1-2')">1-2</button>
+      <button onclick="showYear('year2-1')">2-1</button>
+    <button onclick="showYear('year2-2')">2-2</button>
+     <button onclick="showYear('year3-1')">3-1</button>
+    <button onclick="showYear('year3-2')">3-2</button>
+    <button onclick="showYear('year4-1')">4-1</button>
+     <button onclick="showYear('year4-2')">4-2</button>
+  </div>
+  <div class="content-area">
+    <section id="year1-1" class="year-content active"> 
+   <header>
+    <h1>📐 CSE - Semester 1-1</h1>
+  </header>
+
+  <main>
+    <section class="question-papers1">
+  <h2>📝 Question-papers</h2>
+  <button onclick="uploadFile('CSE')">Upload</button>
+  <input type="file" id="CSEQuestions" style="display:none" />
+
+  <ul id="CSEQuestionList">
+    <li>
+      ⚛️ Questions-papers
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+     <li>
+      Syllabus
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+  </ul>
+</section>
+
+    <section class="study-materials1">
+  <h2>📂 Study Materials</h2>
+  <button onclick="uploadFile('CSE')">Upload</button>
+  <input type="file" id="CSEMaterials" style="display:none" />
+
+  <ul id="CSEMaterialList">
+        <li>
+      ⚛️ Physics
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+     <li>
+      🔢 M1
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+    <li>
+      🧮 Chemistry
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+    <li>
+      🖥️ C Programming Language
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+    <li>
+      example-subject
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+  </ul>
+</section>
+  </main>
+</section>
+   
+    <section id="year1-2" class="year-content">
+       <header>
+    <h1>📐 CSE - Semester 1-2</h1>
+  </header>
+
+  <main>
+    <section class="question-papers1">
+  <h2>📝 Question Papers</h2>
+  <button onclick="uploadFile('CSE')">Upload</button>
+  <input type="file" id="CSEQuestions" style="display:none" />
+
+  <ul id="CSEQuestionList">
+    <li>
+      Question Paper
+      <a href=" File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+     <li>
+      Syllabus
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+  </ul>
+</section>
+
+    <section class="study-materials1">
+  <h2>📂 Study Materials</h2>
+  <button onclick="uploadFile('CSE')">Upload</button>
+  <input type="file" id="CSEMaterials" style="display:none" />
+
+  <ul id="CSEMaterialList">
+     
+     <li>
+      Study Material
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      
+      </a>
+    </li>
+     <li>
+      ⚛️ Physics
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+     <li>
+      🔢 M1
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+    <li>
+      🧮 Chemistry
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+    <li>
+      🖥️ C Programming Language
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+
+  </ul>
+</section>
+  </main>
+</section>
+   <section id="year2-1" class="year-content"> 
+   <header>
+    <h1>📐 CSE - Semester 2-1</h1>
+  </header>
+
+  <main>
+    <section class="question-papers1">
+  <h2>📝 Question Papers</h2>
+  <button onclick="uploadFile('CSE')">Upload</button>
+  <input type="file" id="CSEQuestions" style="display:none" />
+
+  <ul id="CSEQuestionList">
+    <li>
+      Question Paper
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+     <li>
+      Syllabus
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+  </ul>
+</section>
+
+    <section class="study-materials1">
+  <h2>📂 Study Materials</h2>
+  <button onclick="uploadFile('CSE')">Upload</button>
+  <input type="file" id="CSEMaterials" style="display:none" />
+
+  <ul id="CSEMaterialList">
+     
+     <li>
+      Data Structures
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+     <li>
+      ⚛️ Digital Logic Design
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+     <li>
+      🔢 Discrete Mathematics
+
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+    <li>
+      🧮 Computer Organization
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+    <li>
+      🖥️ Object-Oriented Programming using Java
+
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+  </ul>
+</section>
+  </main>
+</section>
+    <section id="year2-2" class="year-content">
+       <header>
+    <h1>📐 CSE - Semester 2-2</h1>
+  </header>
+
+  <main>
+    <section class="question-papers1">
+  <h2>📝 Question Papers</h2>
+  <button onclick="uploadFile('CSE')">Upload</button>
+  <input type="file" id="CSEQuestions" style="display:none" />
+
+  <ul id="CSEQuestionList">
+    <li>
+      Question Paper
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+     <li>
+      Syllabus
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+  </ul>
+</section>
+
+    <section class="study-materials1">
+  <h2>📂 Study Materials</h2>
+  <button onclick="uploadFile('CSE')">Upload</button>
+  <input type="file" id="CSEMaterials" style="display:none" />
+
+  <ul id="CSEMaterialList">
+     
+     <li>
+      Operating Systems
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      
+      </a>
+    </li>
+     <li>
+      ⚛️ Database Management Systems
+
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+     <li>
+      🔢 Design and Analysis of Algorithms
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+    <li>
+      🧮 Software Engineering
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+    <li>
+      🖥️ Computer Networks
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+  </ul>
+</section>
+  </main>
+</section>
+ <section id="year3-1" class="year-content"> 
+   <header>
+    <h1>📐 CSE - Semester 3-1</h1>
+  </header>
+
+  <main>
+    <section class="question-papers1">
+  <h2>📝 Question Papers</h2>
+  <button onclick="uploadFile('CSE')">Upload</button>
+  <input type="file" id="CSEQuestions" style="display:none" />
+
+  <ul id="CSEQuestionList">
+    <li>
+      Question Paper
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+     <li>
+      Syllabus
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+  </ul>
+</section>
+
+    <section class="study-materials1">
+  <h2>📂 Study Materials</h2>
+  <button onclick="uploadFile('CSE')">Upload</button>
+  <input type="file" id="CSEMaterials" style="display:none" />
+
+  <ul id="CSEMaterialList">
+     
+     <li>
+      Web Technologies
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      
+      </a>
+    </li>
+     <li>
+      ⚛️ Artificial Intelligence
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+     <li>
+      🔢 Compiler Design
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+    <li>
+      🧮 Machine Learning
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+    <li>
+      🖥️  IoT
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+  </ul>
+</section>
+  </main>
+</section>
+    <section id="year3-2" class="year-content">
+       <header>
+    <h1>📐 CSE - Semester 3-2</h1>
+  </header>
+
+  <main>
+    <section class="question-papers1">
+  <h2>📝 Question Papers</h2>
+  <button onclick="uploadFile('CSE')">Upload</button>
+  <input type="file" id="CSEQuestions" style="display:none" />
+
+  <ul id="CSEQuestionList">
+    <li>
+      Question Paper
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+     <li>
+      Syllabus
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+  </ul>
+</section>
+
+    <section class="study-materials1">
+  <h2>📂 Study Materials</h2>
+  <button onclick="uploadFile('CSE')">Upload</button>
+  <input type="file" id="CSEMaterials" style="display:none" />
+
+  <ul id="CSEMaterialList">
+     
+     <li>
+      Data Science
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      
+      </a>
+    </li>
+     <li>
+      ⚛️ Cloud Computing
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+     <li>
+      🔢 Professional Elective II
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+    <li>
+      🧮 Open Elective I
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+    <li>
+      🖥️ Soft Skills / Aptitude Training
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+  </ul>
+</section>
+  </main>
+</section> <section id="year4-1" class="year-content"> 
+   <header>
+    <h1>📐 CSE - Semester 4-1</h1>
+  </header>
+
+  <main>
+    <section class="question-papers1">
+  <h2>📝 Question Papers</h2>
+  <button onclick="uploadFile('CSE')">Upload</button>
+  <input type="file" id="CSEQuestions" style="display:none" />
+
+  <ul id="CSEQuestionList">
+    <li>
+      Question Paper
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+     <li>
+      Syllabus
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+  </ul>
+</section>
+
+    <section class="study-materials1">
+  <h2>📂 Study Materials</h2>
+  <button onclick="uploadFile('CSE')">Upload</button>
+  <input type="file" id="CSEMaterials" style="display:none" />
+
+  <ul id="CSEMaterialList">
+     
+     <li>
+      Professional Elective III
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      
+      </a>
+    </li>
+     <li>
+      ⚛️ Professional Elective IV
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+     <li>
+      🔢 Open Elective II
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+    <li>
+      🧮 Industry Internship / Project Phase I
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+    <li>
+      🖥️ Seminar
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+  </ul>
+</section>
+  </main>
+</section>
+    <section id="year4-2" class="year-content">
+       <header>
+    <h1>📐 CSE - Semester 4-2</h1>
+  </header>
+
+  <main>
+    <section class="question-papers1">
+  <h2>📝 Question Papers</h2>
+  <button onclick="uploadFile('CSE')">Upload</button>
+  <input type="file" id="CSEQuestions" style="display:none" />
+
+  <ul id="CSEQuestionList">
+    <li>
+    Question Paper
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+     <li>
+      Syllabus
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      </a>
+    </li>
+  </ul>
+</section>
+
+    <section class="study-materials1">
+  <h2>📂 Study Materials</h2>
+  <button onclick="uploadFile('CSE')">Upload</button>
+  <input type="file" id="CSEMaterials" style="display:none" />
+
+  <ul id="CSEMaterialList">
+     
+     <li>
+      🚀🧠 Major Project
+      <a href="File not Uploaded" download>
+        <button>Download</button>
+      
+      </a>
+    </li>
+      
+  </ul>
+</section>
+  </main>
+</section>
+  </div>
+</div>
+  </main>
+
+  <script>
+     function showYear(yearId) {
+  const sections = document.querySelectorAll('.year-content');
+  sections.forEach(sec => sec.classList.remove('active'));
+  
+  document.getElementById(yearId).classList.add('active');
+}
+    function uploadFile(subject) {
+      const username = prompt("Enter username:");
+      const password = prompt("Enter password:");
+      if (username === "studenthub@2025" && password === "student@2025") {
+        alert("✅ You can now choose your file to upload (simulated)");
+        // Simulate file upload UI
+        document.getElementById(subject + "Questions").click();
+        document.getElementById(subject + "Materials").click();
+      } else {
+        alert("❌ Unauthorized. Upload blocked.");
+      }
+    }
+  </script>
+</body>
+</html>

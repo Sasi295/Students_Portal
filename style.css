@@ -1,0 +1,207 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('uploads/Images/mbg7.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  /* blur the rendered body (this will also blur children) */
+  
+  
+  color: #333;
+}
+
+header {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  color: white;
+  position: relative;
+  margin: 34px auto;
+  width: calc(100% - 48px);
+  max-width: 1970px;
+  transform: translateY(-16px);
+  transition: transform 0.45s cubic-bezier(.25,.8,.25,1), box-shadow 0.45s;
+  will-change: transform, box-shadow;
+  z-index: 10;
+  font-family: 'poppins','montserrat', sans-serif;
+  font-size: large;
+  padding: 10px;
+  text-align: center;
+  
+}
+.updates {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #2b2929, #787e7e);
+  font-family: 'Segoe UI', sans-serif;
+  color: rgb(5, 5, 5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+  background: rgba(126, 120, 120, 0.788);
+  padding: 20px;
+  border-radius: 40px;
+  color: rgb(255, 253, 253);
+  box-shadow: 0 2px 5px rgb(240, 239, 239);
+}
+
+button {
+  background-color: #03a9f4;
+  color: white;
+  font-family: verdana;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0288d1;
+}
+
+footer {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  color: white;
+  position: relative;
+  margin: 24px auto;
+  width: calc(100% - 48px);
+  max-width: 1970px;
+  transform: translateY(-16px);
+  transition: transform 0.45s cubic-bezier(.25,.8,.25,1), box-shadow 0.45s;
+  will-change: transform, box-shadow;
+  z-index: 10;
+  font-family: verdana;
+  font-size: large;
+  padding: 10px;
+  text-align: center;
+  
+}
+  .links {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+  margin: 40px auto;
+}
+
+.link1, .link2, .link3 {
+  text-align: center;
+  text-decoration: none;
+  background-color: #ffffff9f;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.link1:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.link1 img {
+  width: auto;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.link1 p {
+  font-weight: bold;
+  color: #333;
+}
+.link2:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.link2 img {
+  width: auto;
+  height: 200px;
+  margin-bottom: 15px;
+}
+
+.link2 p {
+  font-weight: bold;
+  color: #333;
+}
+.link3:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.link3 img {
+  width: auto;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.link3 p {
+  font-weight: bold;
+  color: #333;
+}
+ 
+.title, .title2, .title3 {
+  font-family: verdana;
+}
+.resources {
+   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  background-color: #0289d100;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px;
+  border-radius: 12px;
+}
+.question-papers2, .question-papers1, .question-papers3 {
+  background-image: url('uploads/Images/mbg4.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: large;
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding: 40px;
+  border-radius: 12px;
+  font-family: Verdana;
+  color: rgba(29, 204, 235, 0.993);
+  box-shadow: 0 2px 5px rgb(240, 239, 239);
+  text-align: center;
+}
+.study-materials2, .study-materials1, .study-materials3 {
+  background-image: url('uploads/Images/mbg4.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  font-size: large;
+  padding: 40px;
+  border-radius: 12px;
+  font-family: Verdana;
+   color: rgba(29, 204, 235, 0.993);
+  box-shadow: 0 2px 5px rgb(240, 239, 239);
+  text-align: center;
+}
+ 
